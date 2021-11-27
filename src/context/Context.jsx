@@ -3,17 +3,17 @@ import React, { createContext } from 'react';
 
 
 export const Contexts = createContext({
-    todo:[],
-    setTod:()=>{}
+    FontFamily:[],
+    setFontFamily:()=>{}
 });
 
 const Context = ({children}) => {
 
-    const [todo, setTodo] = React.useState([])
+    const [FontFamily, setFontFamily] = React.useState([])
 
     return (
         <Contexts.Provider value={{
-            todo, setTodo
+            FontFamily, setFontFamily
         }}>
             {children}
         </Contexts.Provider>

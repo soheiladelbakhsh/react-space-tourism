@@ -5,13 +5,17 @@ import { BrowserRouter } from "react-router-dom";
 
 import "./scss/forward.scss";
 import Context from "./context/Context";
+import { ThemeProvider } from "@mui/material/styles";
+import { Theme } from "./theme/Theme";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Context>
-        <App />
-      </Context>
+      <ThemeProvider theme={Theme}>
+        <Context>
+          <App />
+        </Context>
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
