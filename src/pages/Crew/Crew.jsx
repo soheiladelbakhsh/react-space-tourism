@@ -69,7 +69,7 @@ const Crew = () => {
           >
             {CrewData.name}
           </Typography>
-          <Typography variant="body1" width="450px">
+          <Typography variant="body1" width="450px" color={Theme.palette.primary.light}>
             {CrewData.bio}
           </Typography>
           <Box position="absolute" bottom="4rem">

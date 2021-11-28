@@ -5,3 +5,6 @@ export let DestinationDataSource = dataSource.destinations
 
 
 export let CrewDestinationSource = dataSource.crew
+
+
+export let TechnologyDataSource= dataSource.technology

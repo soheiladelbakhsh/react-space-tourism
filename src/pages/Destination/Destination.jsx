@@ -114,13 +114,13 @@ const Destination = () => {
             >
               {DestinationData.name}
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body1" color={Theme.palette.primary.light}>
               {DestinationData.description}
             </Typography>
             <Divider className={style.divider} />
             <Box display="flex" alignItems="center">
               <Box color="white" marginRight="100px">
-                <Typography variant="subtitle2">AVG. DISTANCE</Typography>
+                <Typography variant="subtitle2" color={Theme.palette.primary.light}>AVG. DISTANCE</Typography>
                 <Typography
                   variant="subtitle1"
                   className={style.uppercasetransform}
@@ -129,7 +129,7 @@ const Destination = () => {
                 </Typography>
               </Box>
               <Box color="white">
-                <Typography variant="subtitle2">Est. travel time</Typography>
+                <Typography variant="subtitle2" color={Theme.palette.primary.light}>Est. travel time</Typography>
                 <Typography
                   variant="subtitle1"
                   className={style.uppercasetransform}

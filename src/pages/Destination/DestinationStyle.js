@@ -17,9 +17,9 @@ export const DestinationStyle=makeStyles({
         width:"430px"
     },
     tabsStyle:{
-        color:"white",
+        color:Theme.palette.primary.light,
         '& button':{
-            color:"white",
+            color:Theme.palette.primary.light,
             marginRight:"10px",
             fontFamily:Theme.typography.subtitle2.fontFamily,
             fontSize:Theme.typography.subtitle2.fontSize,

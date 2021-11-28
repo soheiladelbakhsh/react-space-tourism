@@ -4,8 +4,8 @@ export const Theme = createTheme({
   palette: {
     primary: {
       main: "#fff",
-      light: "#0bbd17",
-      dark: "#d0d6f9",
+      light: "#d0d6f9",
+      dark: "#0b0d17",
       gray: "gray",
       grayHover:"#d2d2d238",
       black: "black",
@@ -20,6 +20,7 @@ export const Theme = createTheme({
     fontFamily1: "Bellefair",
     fontFamily2: "Barlow",
     Bold: "700",
+    fontSize16px:"16px",
     h1: {
       fontSize: "150px",
       fontFamily: "Bellefair",

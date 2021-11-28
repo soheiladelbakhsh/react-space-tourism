@@ -63,7 +63,7 @@ const Header = () => {
             <Typography variant="span">02</Typography>CREW
           </Link>
 
-          <Link to="/" className={`${headerstyle.linkStyle}`}>
+          <Link to="/Technology" className={`${headerstyle.linkStyle}`}>
           <Typography variant="span">03</Typography>TECHNOLOGY
           </Link>
         </Grid>
