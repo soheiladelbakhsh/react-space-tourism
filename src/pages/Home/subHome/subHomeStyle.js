@@ -4,12 +4,9 @@ import { Theme } from "../../../theme/Theme";
 
 export const subHomeStyle = makeStyles({
   BgLink: {
-      backgroundColor:"transparent",
-      transition:"all ease .5s",
-    [Theme.breakpoints.down("lg")]: {
-      display: "none!important",
-    },
-    '& .exploreLink': {
+    backgroundColor: "transparent",
+    transition: "all ease .5s",
+    "& .exploreLink": {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -22,4 +19,21 @@ export const subHomeStyle = makeStyles({
       borderRadius: "100%",
     },
   },
+  mdMode: {
+    [Theme.breakpoints.down("lg")]: {
+      alignItems: "center!important",
+      justifyContent: "center!important",
+      flexDirection: "column!important",
+    },
+    "& .mdSpaceDesc": {
+      [Theme.breakpoints.down("lg")]: {
+        textAlign: "center!important",
+      },
+    },
+  },
+  resModeExplore:{
+    [Theme.breakpoints.down('lg')]:{
+      marginTop:"5rem!important"
+    }
+  }
 });

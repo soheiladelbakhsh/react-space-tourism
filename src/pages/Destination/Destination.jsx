@@ -45,8 +45,8 @@ const Destination = () => {
     <>
       <Box className={style.BgDestination}>
         <Grid container marginTop="12rem">
-          <Grid item lg={1.5}></Grid>
-          <Grid item lg={4.5}>
+          <Grid item lg={1.5} sm={0.5}></Grid>
+          <Grid item lg={4.5} sm={11.5}>
             <Typography variant="h5">
               {" "}
               <Typography
@@ -59,11 +59,11 @@ const Destination = () => {
               PICK YOUR DESTINATION
             </Typography>
           </Grid>
-          <Grid item lg={6}></Grid>
+          <Grid item lg={6} sm={0}></Grid>
         </Grid>
-        <Grid container marginTop="3rem">
-          <Grid item lg={1.9}></Grid>
-          <Grid item lg={4}>
+        <Grid container marginTop="3rem" className={style.resToggle}>
+          <Grid item lg={1.9} sm={0}></Grid>
+          <Grid item lg={4} sm={12}>
             <Box>
               <img
                 src={DestinationData.images.png}
@@ -72,8 +72,8 @@ const Destination = () => {
               />
             </Box>
           </Grid>
-          <Grid item lg={1}></Grid>
-          <Grid item lg={4.1}>
+          <Grid item lg={1} sm={0}></Grid>
+          <Grid item lg={4.1} sm={12} className={style.resToggleDesc}>
             <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
               <Tabs
                 value={value}
@@ -114,7 +114,7 @@ const Destination = () => {
             >
               {DestinationData.name}
             </Typography>
-            <Typography variant="body1" color={Theme.palette.primary.light}>
+            <Typography variant="body1" color={Theme.palette.primary.light} maxWidth="410px">
               {DestinationData.description}
             </Typography>
             <Divider className={style.divider} />
@@ -139,7 +139,7 @@ const Destination = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item lg={1}></Grid>
+          <Grid item lg={1} sm={0}></Grid>
         </Grid>
       </Box>
     </>

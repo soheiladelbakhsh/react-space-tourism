@@ -37,5 +37,31 @@ export const CrewStyle=makeStyles({
     imgCrew:{
         width:"412px",
         height:"100%"
-      }
+      },
+      resModeBtnGroup:{
+          [Theme.breakpoints.down('lg')]:{
+              position:"relative!important",
+              bottom:"0!important",
+              margin:"1rem 0 2rem 0"
+          }
+      },
+      resModeCrew:{
+          [Theme.breakpoints.down('lg')]:{
+              display:"flex!important",
+              flexDirection:"column!important",
+              alignItems:"center!important",
+              textAlign:"center!important"
+          }
+      },
+      resModeCrewItem:{
+        [Theme.breakpoints.down('lg')]:{
+            display:"flex!important",
+            flexDirection:"column!important",
+            alignItems:"center!important",
+            textAlign:"center!important"
+        },
+        '& h5':{
+            marginBottom:'2rem!important'
+        }
+    }
 })

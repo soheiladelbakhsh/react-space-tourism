@@ -22,8 +22,8 @@ const Header = () => {
         marginTop={8}
         zIndex="100"
       >
-        <Grid item lg={0.5}></Grid>
-        <Grid item lg={1}>
+        <Grid item sm={0.5}></Grid>
+        <Grid item sm={1}>
           <img src={logo} alt="" />
         </Grid>
         <Box
@@ -38,12 +38,13 @@ const Header = () => {
         <Grid
           item
           container
-          lg={6.5}
+          md={6.5}
+          sm={8.3}
           position="absolute"
           right="0"
           backgroundColor="rgba(255, 255, 255, 0.04)"
         >
-          <Grid item lg={1}></Grid>
+          <Grid item sm={1}></Grid>
           <Link
             to="/"
             className={`${clsx(headerstyle.linkStyle, headerstyle.margin)}`}

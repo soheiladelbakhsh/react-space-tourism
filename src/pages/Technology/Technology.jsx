@@ -8,9 +8,10 @@ import { TechnologyStyle } from "./TechnologyStyle";
 
 import { TechnologyDataSource } from "../../data/Data";
 
-import TechnologyImg from "../../assets/technology/image-space-capsule-portrait.jpg"
+import TechnologyImg from "../../assets/technology/image-launch-vehicle-portrait.jpg"
 import TechnologyImg2 from "../../assets/technology/image-launch-vehicle-portrait.jpg"
 import TechnologyImg3 from "../../assets/technology/image-spaceport-portrait.jpg"
+
 
 const Technology = () => {
   const style = TechnologyStyle();
@@ -42,8 +43,8 @@ const Technology = () => {
     <>
       <Box className={style.BgTechnology}>
         <Grid container marginTop="12rem">
-          <Grid item lg={1.5}></Grid>
-          <Grid item lg={5}>
+          <Grid item lg={1.5} sm={0.5}></Grid>
+          <Grid item lg={5} sm={11.5}>
             <Typography variant="h5">
               {" "}
               <Typography
@@ -56,11 +57,11 @@ const Technology = () => {
               SPACE LAUNCH 101
             </Typography>
           </Grid>
-          <Grid item lg={5.5}></Grid>
+          <Grid item lg={5.5} sm={0}></Grid>
         </Grid>
-        <Grid container display="flex" alignItems="center" marginBottom="3rem">
-          <Grid item lg={1.5}></Grid>
-          <Grid item lg={6.5} display="flex">
+        <Grid container display="flex" alignItems="center" marginBottom="3rem" className={style.resModeTechnologyBottom}>
+          <Grid item lg={1.5} sm={0}></Grid>
+          <Grid item lg={6.5} display="flex" sm={12}>
             <Box
               display="flex"
               flexDirection="column"
@@ -68,6 +69,7 @@ const Technology = () => {
               height="292.350px"
              // marginTop="130px"
               marginRight="100px"
+              className={style.resModeBtnGroupFirst}
             >
               <button className={SelectedTechnology==0?clsx(style.btnTechnology,style.selecteditem): style.btnTechnology} onClick={()=>{selectLaunch()}}>
                 <Typography variant="h4">1</Typography>
@@ -105,9 +107,31 @@ const Technology = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item lg={.5}></Grid>
-          <Grid item lg={3.5}>
-            <img src={TechnologyData.images.landscape} alt="" className={style.PortraitImg}/>
+          <Grid item lg={.5} sm={0}></Grid>
+          <Grid item lg={3.5} sm={12} className={style.resModeTechnologySub}>
+            <img src={TechnologyData.images.landscape} alt="" className={style.landscapeImg}/>
+            <img src={TechnologyData.images.portrait} alt="" className={style.PortraitImg}/>
+            <Box
+              display="none"
+              flexDirection="row"
+              justifyContent="space-between"
+             /// height="292.350px"
+             // marginTop="130px"
+             // marginRight="100px"
+             width="250px"
+              className={style.resModeBtnGroupSecond}
+              margin="4rem 0 4rem 0"
+            >
+              <button className={SelectedTechnology==0?clsx(style.btnTechnology,style.selecteditem): style.btnTechnology} onClick={()=>{selectLaunch()}}>
+                <Typography variant="h4">1</Typography>
+              </button>
+              <button className={SelectedTechnology==1?clsx(style.btnTechnology,style.selecteditem): style.btnTechnology} onClick={()=>{selectSpaceport()}}>
+                <Typography variant="h4">2</Typography>
+              </button>
+              <button className={SelectedTechnology==2?clsx(style.btnTechnology,style.selecteditem): style.btnTechnology} onClick={()=>{selectcapsule()}}>
+                <Typography variant="h4">3</Typography>
+              </button>
+            </Box>
           </Grid>
         </Grid>
       </Box>

@@ -45,9 +45,12 @@ export const HeaderStyle = makeStyles({
   },
   margin: {
     marginRight: "55px!important",
+    [Theme.breakpoints.down('lg')]:{
+      marginRight: "2vw!important",
+    }
   },
   spandivider: {
-    [Theme.breakpoints.down("lg")]: {
+    [Theme.breakpoints.down("md")]: {
       display: "none!important",
     },
   },

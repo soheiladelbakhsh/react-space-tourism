@@ -5,6 +5,10 @@ import { makeStyles } from "@mui/styles";
 import BgDesktopTechnology from "../../assets/technology/background-technology-desktop.jpg"
 import { Theme } from "../../theme/Theme";
 
+
+
+import { TechnologyDataSource } from "../../data/Data";
+
 export const TechnologyStyle=makeStyles({
     BgTechnology:{
         backgroundImage:`URL(${BgDesktopTechnology})`,
@@ -34,14 +38,48 @@ export const TechnologyStyle=makeStyles({
     fontTransitionUppercase:{
         textTransform:"uppercase"
     },
+    landscapeImg:{
+        width:"450px",
+        [Theme.breakpoints.down('md')]:{
+            display:"none",
+        }
+    },
     PortraitImg:{
-       
-        width:"450px"
+        display:"none",
+        [Theme.breakpoints.down('md')]:{
+            display:"block",
+            width:"101.5%!important"
+        }
     },
     selecteditem:{
         backgroundColor:Theme.palette.primary.main,
         '& h4':{
             color:`${Theme.palette.primary.dark}!important`
+        }
+    },
+    resModeBtnGroupSecond:{
+        [Theme.breakpoints.down('lg')]:{
+            display:'flex!important'
+        }
+    },
+    resModeBtnGroupFirst:{
+        [Theme.breakpoints.down('lg')]:{
+            display:'none!important'
+        }
+    },
+    resModeTechnologyBottom:{
+        [Theme.breakpoints.down('lg')]:{
+            flexDirection:"column-reverse!important",
+            alignItems:"center",
+            textAlign:"center"
+        }
+    },
+    resModeTechnologySub:{
+        [Theme.breakpoints.down('lg')]:{
+            display:"flex!important",
+            flexDirection:"column!important",
+            alignItems:"center!important",
+            marginTop:"3rem!important"
         }
     }
    

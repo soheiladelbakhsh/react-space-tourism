@@ -40,9 +40,9 @@ const Crew = () => {
 
   return (
     <Box className={style.bgCrew}>
-      <Grid container marginTop="12rem">
-        <Grid item lg={1.5}></Grid>
-        <Grid item lg={4}>
+      <Grid container marginTop="12rem" className={style.resModeCrew}>
+        <Grid item lg={1.5} sm={0}></Grid>
+        <Grid item lg={4} sm={12} className={style.resModeCrewItem}>
           <Typography variant="h5" marginBottom="6rem">
             {" "}
             <Typography
@@ -72,7 +72,7 @@ const Crew = () => {
           <Typography variant="body1" width="450px" color={Theme.palette.primary.light}>
             {CrewData.bio}
           </Typography>
-          <Box position="absolute" bottom="4rem">
+          <Box position="absolute" bottom="4rem" className={style.resModeBtnGroup}>
             <button
               className={style.btnRound}
               onClick={() => {
@@ -107,11 +107,11 @@ const Crew = () => {
             </button>
           </Box>
         </Grid>
-        <Grid item lg={1}></Grid>
-        <Grid item lg={4} height="560.5px">
+        <Grid item lg={1} sm={0}></Grid>
+        <Grid item lg={4} height="560.5px" sm={12}>
           <img src={CrewData.images.png} alt="" className={style.imgCrew} />
         </Grid>
-        <Grid item lg={1.5}></Grid>
+        <Grid item lg={1.5} sm={0}></Grid>
       </Grid>
     </Box>
   );

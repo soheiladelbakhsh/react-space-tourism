@@ -9,20 +9,29 @@ import { subHomeStyle } from "./subHomeStyle";
 const SubHome = () => {
   const style = subHomeStyle();
 
-  const [HoverLink, setHoverLink] = React.useState(false)
+  const [HoverLink, setHoverLink] = React.useState(false);
 
-  const HoverOn=function () {
-    setHoverLink(true)
-  }
-  const HoverOff=function () {
-    setHoverLink(false)
-  }
+  const HoverOn = function () {
+    setHoverLink(true);
+  };
+  const HoverOff = function () {
+    setHoverLink(false);
+  };
+
+  const scrollExplore = function (e) {
+    window.scroll(0,0);
+  };
 
   return (
     <Box marginTop="17rem">
-      <Grid container dispaly="flex" alignItems="center">
-        <Grid item lg={1.5}></Grid>
-        <Grid item lg={4}>
+      <Grid
+        container
+        dispaly="flex"
+        alignItems="center"
+        className={style.mdMode}
+      >
+        <Grid item lg={1.5} sm={0}></Grid>
+        <Grid item lg={4} sm={12} className="mdSpaceDesc">
           <Typography variant="h5">SO,YOU WANT TO TRAVEL TO</Typography>
           <Typography variant="h1" margin="15px 0 25px 0">
             SPACE
@@ -34,24 +43,36 @@ const SubHome = () => {
             world experience!
           </Typography>
         </Grid>
-        <Grid item lg={2}></Grid>
-        <Grid item lg={3}>
+        <Grid item lg={2} sm={0}></Grid>
+        <Grid item lg={3} sm={12} className={style.resModeExplore}>
           <Box
             width="380px"
             height="380px"
             borderRadius="100%"
             display="flex"
             alignItems="center"
-            justifyContent="center" 
+            justifyContent="center"
             className={style.BgLink}
-            backgroundColor={HoverLink?Theme.palette.primary.linkHover:"transparent"}
+            backgroundColor={
+              HoverLink ? Theme.palette.primary.linkHover : "transparent"
+            }
           >
-            <Link to="/Destination" className="exploreLink" onMouseEnter={()=>{HoverOn()}} onMouseLeave={()=>{HoverOff()}}>
+            <Link
+              to="/Destination"
+              className="exploreLink"
+              onMouseEnter={() => {
+                HoverOn();
+              }}
+              onMouseLeave={() => {
+                HoverOff();
+              }}
+              onClick={scrollExplore}
+            >
               EXPLORE
             </Link>
           </Box>
         </Grid>
-        <Grid item lg={1.5}></Grid>
+        <Grid item lg={1.5} sm={0}></Grid>
       </Grid>
     </Box>
   );
