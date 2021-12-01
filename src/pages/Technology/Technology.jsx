@@ -12,6 +12,12 @@ import TechnologyImg from "../../assets/technology/image-launch-vehicle-portrait
 import TechnologyImg2 from "../../assets/technology/image-space-capsule-portrait.jpg";
 import TechnologyImg3 from "../../assets/technology/image-spaceport-portrait.jpg";
 
+import TechnologyImg4 from "../../assets/technology/image-launch-vehicle-landscape.jpg";
+import TechnologyImg5 from "../../assets/technology/image-spaceport-landscape.jpg";
+import TechnologyImg6 from "../../assets/technology/image-space-capsule-landscape.jpg";
+
+
+
 const Technology = () => {
   const style = TechnologyStyle();
 
@@ -28,19 +34,19 @@ const Technology = () => {
   const selectLaunch = function () {
     setTechnologyData(TechnologyDataSource[0]);
     setSelectedTechnology(0);
-    setLandscapeimg(1)
+    setLandscapeimg(1);
   };
   const selectSpaceport = function () {
     setTechnologyData(TechnologyDataSource[1]);
     setSelectedTechnology(1);
-    setLandscapeimg(2)
+    setLandscapeimg(2);
   };
   const selectcapsule = function () {
     setTechnologyData(TechnologyDataSource[2]);
     setSelectedTechnology(2);
-    setLandscapeimg(3)
+    setLandscapeimg(3);
   };
-
+  console.log(TechnologyDataSource)
   return (
     <>
       <Box className={style.BgTechnology}>
@@ -180,10 +186,24 @@ const Technology = () => {
               style={{ display: landscapeimg == 2 ? "block" : "none" }}
             />
             <img
-              src={TechnologyData.images.portrait}
+              src={TechnologyImg4}
               alt=""
+              style={{ display: landscapeimg == 1 ? "block" : "none" }}
               className={style.PortraitImg}
             />
+            <img
+              src={TechnologyImg5}
+              alt=""
+              style={{ display: landscapeimg == 2 ? "block" : "none" }}
+              className={style.PortraitImg}
+            />{" "}
+            <img
+              src={TechnologyImg6}
+              alt=""
+              style={{ display: landscapeimg == 3 ? "block" : "none" }}
+              className={style.PortraitImg}
+            />{" "}
+           
             <Box
               display="none"
               flexDirection="row"
