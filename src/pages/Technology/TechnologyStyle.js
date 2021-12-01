@@ -41,7 +41,7 @@ export const TechnologyStyle=makeStyles({
     landscapeImg:{
         width:"450px",
         [Theme.breakpoints.down('lg')]:{
-            display:"none",
+            display:"none!important",
         }
     },
     PortraitImg:{
