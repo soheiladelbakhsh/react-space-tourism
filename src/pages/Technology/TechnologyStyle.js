@@ -40,16 +40,16 @@ export const TechnologyStyle=makeStyles({
     },
     landscapeImg:{
         width:"450px",
-        [Theme.breakpoints.down('md')]:{
+        [Theme.breakpoints.down('lg')]:{
             display:"none",
         }
     },
     PortraitImg:{
         display:"none",
-        [Theme.breakpoints.down('md')]:{
+        [Theme.breakpoints.down('lg')]:{
             display:"block",
             width:"101.5%!important"
-        }
+        }   
     },
     selecteditem:{
         backgroundColor:Theme.palette.primary.main,
@@ -75,12 +75,43 @@ export const TechnologyStyle=makeStyles({
         }
     },
     resModeTechnologySub:{
+        overflowX:"hidden",
+        display:"flex",
+        alignItems:"center",
         [Theme.breakpoints.down('lg')]:{
             display:"flex!important",
             flexDirection:"column!important",
             alignItems:"center!important",
             marginTop:"3rem!important"
         }
+    },
+    launchMobileDisplay:{
+        [Theme.breakpoints.down("sm")]:{
+            display:"flex",
+            alignItems:"center",
+            textAlign:"center",
+            justifyContent:"center"
+        }
+    },
+    DescLaunchMobileMode:{
+        [Theme.breakpoints.down("sm")]:{
+            width:"auto!important",
+            fontSize:`${Theme.typography.body1Mobile.fontSize}!important`
+        }
+    },
+    h3MobileModeTypography:{
+        [Theme.breakpoints.down("sm")]:{
+            fontSize:`${Theme.typography.h3Mobile.fontSize}!important`
+        }
+    },
+    spanMobileModeTerminology:{
+        [Theme.breakpoints.down("sm")]:{
+            fontSize:`${Theme.typography.fontSize14px}!important`
+        }
+    },
+    h5MobileModeTypography:{
+        [Theme.breakpoints.down("sm")]:{
+            fontSize:`${Theme.typography.h5Mobile.fontSize}!important`
+        }
     }
-   
 })

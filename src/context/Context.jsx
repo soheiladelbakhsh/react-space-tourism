@@ -3,17 +3,17 @@ import React, { createContext } from 'react';
 
 
 export const Contexts = createContext({
-    FontFamily:[],
-    setFontFamily:()=>{}
+    Toggling:[],
+    setToggling:()=>{}
 });
 
 const Context = ({children}) => {
 
-    const [FontFamily, setFontFamily] = React.useState([])
+    const [Toggling, setToggling] = React.useState(false);
 
     return (
         <Contexts.Provider value={{
-            FontFamily, setFontFamily
+            Toggling, setToggling
         }}>
             {children}
         </Contexts.Provider>

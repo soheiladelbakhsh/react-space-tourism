@@ -16,6 +16,9 @@ export const DestinationStyle = makeStyles({
   },
   MoonImg: {
     width: "430px",
+    [Theme.breakpoints.down('sm')]:{
+      width:"70%!important"
+    }
   },
   tabsStyle: {
     color: Theme.palette.primary.light,
@@ -26,6 +29,14 @@ export const DestinationStyle = makeStyles({
       fontSize: Theme.typography.subtitle2.fontSize,
       letterSpacing: Theme.typography.subtitle2.letterSpacing,
       position: "relative",
+      [Theme.breakpoints.down('sm')]:{
+        marginRight:"0!important",
+        fontSize:"10px!important",
+        padding:'0!important',
+        width:'50px!important',
+        minWidth:'0!important',
+        width:"25%"
+      },
       "&::before": {
         content: "''",
         display: "inline-block",
@@ -63,6 +74,9 @@ export const DestinationStyle = makeStyles({
       alignItems: "center!important",
       textAlign: "center!important",
     },
+    [Theme.breakpoints.down("sm")]: {
+      justifyContent:"center!importent"
+    }
   },
   resToggleDesc: {
     [Theme.breakpoints.down("lg")]: {
@@ -72,4 +86,42 @@ export const DestinationStyle = makeStyles({
         marginTop:"40px!important"
       },
   },
+  TabItemsResMode:{
+    [Theme.breakpoints.down('sm')]:{
+      width:'100%!important'
+    }
+  },
+  NameResMode:{
+    [Theme.breakpoints.down('sm')]:{
+      fontSize:`${Theme.typography.h2Mobile.fontSize}!important`
+    }
+  },
+  DescModeMobile:{
+    [Theme.breakpoints.down("sm")]:{
+      fontSize:`${Theme.typography.body1Mobile.fontSize}!important`
+    }
+  },
+  h5FontSizeMobile:{
+    [Theme.breakpoints.down('sm')]:{
+      fontSize:`${Theme.typography.h5Mobile.fontSize}!important`
+    }
+  },
+  timeDescResMobile:{
+    [Theme.breakpoints.down('sm')]:{
+      flexDirection:"column!important",
+    },
+    '& .descTimeRes':{
+      [Theme.breakpoints.down('sm')]:{
+        marginRight:"0!important"
+      },
+    }
+  },
+  PickResMode:{
+    [Theme.breakpoints.down('sm')]:{
+      display:"flex",
+      justifyContent:'center',
+      textAlign:"center",
+      marginTop:"8rem!important"
+    }
+  }
 });

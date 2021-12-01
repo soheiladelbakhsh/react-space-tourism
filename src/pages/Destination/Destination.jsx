@@ -12,6 +12,7 @@ import europaImg from "../../assets/destination/image-europa.png";
 import titanImg from "../../assets/destination/image-titan.png";
 
 import { DestinationDataSource } from "../../data/Data";
+import clsx from "clsx";
 
 const Destination = () => {
   const style = DestinationStyle();
@@ -44,10 +45,10 @@ const Destination = () => {
   return (
     <>
       <Box className={style.BgDestination}>
-        <Grid container marginTop="12rem">
-          <Grid item lg={1.5} sm={0.5}></Grid>
-          <Grid item lg={4.5} sm={11.5}>
-            <Typography variant="h5">
+        <Grid container marginTop="12rem" className={style.PickResMode}>
+          <Grid item lg={1.5} sm={0.5} xs={0}></Grid>
+          <Grid item lg={4.5} sm={11.5} xs={12}>
+            <Typography variant="h5" className={style.h5FontSizeMobile}>
               {" "}
               <Typography
                 variant="span"
@@ -62,8 +63,8 @@ const Destination = () => {
           <Grid item lg={6} sm={0}></Grid>
         </Grid>
         <Grid container marginTop="3rem" className={style.resToggle}>
-          <Grid item lg={1.9} sm={0}></Grid>
-          <Grid item lg={4} sm={12}>
+          <Grid item lg={1.9} sm={0} xs={0}></Grid>
+          <Grid item lg={4} sm={12} xs={12}>
             <Box>
               <img
                 src={DestinationData.images.png}
@@ -72,9 +73,9 @@ const Destination = () => {
               />
             </Box>
           </Grid>
-          <Grid item lg={1} sm={0}></Grid>
-          <Grid item lg={4.1} sm={12} className={style.resToggleDesc}>
-            <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+          <Grid item lg={1} sm={0} xs={0}></Grid>
+          <Grid item lg={4.1} sm={12} className={style.resToggleDesc} xs={12}>
+            <Box sx={{ borderBottom: 1, borderColor: "divider" }} className={style.TabItemsResMode}>
               <Tabs
                 value={value}
                 onChange={handleChange}
@@ -109,17 +110,17 @@ const Destination = () => {
             </Box>
             <Typography
               variant="h2"
-              className={style.uppercasetransform}
+              className={clsx(style.uppercasetransform,style.NameResMode)}
               margin="20px 0 20px 0"
             >
               {DestinationData.name}
             </Typography>
-            <Typography variant="body1" color={Theme.palette.primary.light} maxWidth="410px">
+            <Typography variant="body1" color={Theme.palette.primary.light} maxWidth="410px" className={style.DescModeMobile}>
               {DestinationData.description}
             </Typography>
             <Divider className={style.divider} />
-            <Box display="flex" alignItems="center">
-              <Box color="white" marginRight="100px">
+            <Box display="flex" alignItems="center" className={style.timeDescResMobile}>
+              <Box color="white" marginRight="100px" className="descTimeRes">
                 <Typography variant="subtitle2" color={Theme.palette.primary.light}>AVG. DISTANCE</Typography>
                 <Typography
                   variant="subtitle1"

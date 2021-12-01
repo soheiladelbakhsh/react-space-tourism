@@ -8,9 +8,9 @@ import { TechnologyStyle } from "./TechnologyStyle";
 
 import { TechnologyDataSource } from "../../data/Data";
 
-import TechnologyImg from "../../assets/technology/image-launch-vehicle-portrait.jpg"
-import TechnologyImg2 from "../../assets/technology/image-launch-vehicle-portrait.jpg"
-import TechnologyImg3 from "../../assets/technology/image-spaceport-portrait.jpg"
+import TechnologyImg from "../../assets/technology/image-launch-vehicle-landscape.jpg"
+import TechnologyImg2 from "../../assets/technology/image-space-capsule-landscape.jpg"
+import TechnologyImg3 from "../../assets/technology/image-spaceport-landscape.jpg"
 
 
 const Technology = () => {
@@ -43,9 +43,9 @@ const Technology = () => {
     <>
       <Box className={style.BgTechnology}>
         <Grid container marginTop="12rem">
-          <Grid item lg={1.5} sm={0.5}></Grid>
-          <Grid item lg={5} sm={11.5}>
-            <Typography variant="h5">
+          <Grid item lg={1.5} sm={0.5} xs={0}></Grid>
+          <Grid item lg={5} sm={11.5} xs={12} className={style.launchMobileDisplay}>
+            <Typography variant="h5" className={style.h5MobileModeTypography}>
               {" "}
               <Typography
                 variant="span"
@@ -87,12 +87,13 @@ const Technology = () => {
                 fontSize={Theme.typography.fontSize16px}
                 fontFamily={Theme.typography.fontFamily2}
                 color={Theme.palette.primary.light}
+                className={style.spanMobileModeTerminology}
               >
                 THE TERMINOLOGY…
               </Typography>
               <Typography
                 variant="h3"
-                className={style.fontTransitionUppercase}
+                className={clsx(style.fontTransitionUppercase,style.h3MobileModeTypography)}
                 margin="20px 0 25px 0"
               >
                 {TechnologyData.name}
@@ -101,6 +102,7 @@ const Technology = () => {
                 variant="body1"
                 width="430px"
                 color={Theme.palette.primary.light}
+                className={style.DescLaunchMobileMode}
               >
                 {TechnologyData.description}
                 
@@ -108,7 +110,7 @@ const Technology = () => {
             </Box>
           </Grid>
           <Grid item lg={.5} sm={0}></Grid>
-          <Grid item lg={3.5} sm={12} className={style.resModeTechnologySub}>
+          <Grid item lg={3.5} sm={12} className={style.resModeTechnologySub} width="100%" overflowX="hidden">
             <img src={TechnologyData.images.landscape} alt="" className={style.landscapeImg}/>
             <img src={TechnologyData.images.portrait} alt="" className={style.PortraitImg}/>
             <Box

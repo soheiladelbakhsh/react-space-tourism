@@ -50,9 +50,31 @@ export const HeaderStyle = makeStyles({
     }
   },
   spandivider: {
-    [Theme.breakpoints.down("md")]: {
+    [Theme.breakpoints.down("lg")]: {
       display: "none!important",
     },
   },
-  link: {},
+  headerListLinkResMode:{
+    [Theme.breakpoints.down('sm')]:{
+      display:"none!important"
+    }
+  },
+  TopBoxResMarginMobile:{
+    [Theme.breakpoints.down('sm')]:{
+      marginTop:"20px!important"
+    }
+  },
+  btnToggleMenu:{
+    display:"none",
+    [Theme.breakpoints.down("sm")]:{
+      display:"inline-block",
+      position:"absolute",
+      right:"1rem",
+      top:"2rem",
+      border:"none",
+      backgroundColor:"transparent",
+      alignItems:"center",
+      transition:"all ease 0.5s"
+    }
+  }
 });
